@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+GzipLocal:
+  ribbon:
+    listOfServers: localhost:8080
+    ConnectTimeout: 20000
+    ReadTimeout: 20000
+    IsSecure: false
+hystrix.command.default.execution:
+  timeout.enabled: true
+  isolation.thread.timeoutInMilliseconds: 50000
